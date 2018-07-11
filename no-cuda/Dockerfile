@@ -68,6 +68,9 @@ RUN conda install -y graphviz=2.38.0 \
  && conda clean -ya
 RUN pip install graphviz
 
+# Install Tensorboard-Pytorch
+RUN pip install git+https://github.com/lanpa/tensorboard-pytorch
+
 # Install OpenCV3 Python bindings
 RUN sudo apt-get update && sudo apt-get install -y --no-install-recommends \
     libgtk2.0-0 \
